@@ -9,13 +9,37 @@
     <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
+  <p class="text-center">PÁGINA WEB RICK AND MORTY.</p>
+
     <header>
+      <div class="position-relative m-4">
+        
+          
+        </div>
+        <div id="filters">
+          <input type="text" id="name-filter" placeholder="Busca a tu personaje!">
+          <select name="status-filter" id="status-filter">
+            <option value="">Filtrar por estado</option>
+            <option value="alive">Vivo</option>
+            <option value="dead">Muerto</option>
+            <option value="unknown">Desconocido</option>
+          </select>
+        </div>
+       
+        
+      </div>
+      <input  id="botonHtml" type="submit" name="previous" value="Previous page" class="mod_quiz-prev-nav btn btn-secondary" id="mod_quiz-prev-nav" data-initial-value="Previous page">
+      <input id="botonHtml2" type="submit" name="next" value="Next page" class="mod_quiz-next-nav btn btn-primary" id="mod_quiz-next-nav" data-initial-value="Next page">
         <div class="collapse" id="navbarToggleExternalContent" data-bs-theme="dark">
             <div class="bg-dark p-4">
               <h5 class="text-body-emphasis h4">Collapsed content</h5>
               <span class="text-body-secondary">Toggleable via the navbar brand.</span>
             </div>
           </div>
+          <nav aria-label="Page navigation example">
+            <ul class="pagination">
+            </ul>
+          </nav>
           <nav class="navbar navbar-dark bg-dark">
             <div class="container-fluid">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,6 +49,7 @@
           </nav>
         </header>
     <main>
+      
         <select name="pagina" id="pagina" class="form-select" aria-label="Default select example" onchange="apiRicky(this.value)">
             <!-- select tiene el metodo "onchange" que cambia el parametro de la función apiRicky y coge el valor de la pagina que seleccionemos por ejemplo página 1= valor 1 -->
             <option value="0" selected>Accede a otras páginas!</option>
